@@ -14,7 +14,7 @@ This project showcase how to simplify code with inherited widget
 
 ## Implemented CodeBase 
 
-```
+```dart
 class MyInheritedWidget extends InheritedWidget {
   final bool isLoading;
   final int counter;
@@ -37,7 +37,7 @@ class MyInheritedWidget extends InheritedWidget {
 
 * The inherited widget works in conjunction with a stateful widget and allows you to pass that StatefulWidgets state to all of its ancestors. Its a convenience widget. So you don't have to type the code in every class to pass state down to its children. *
 
-```
+```dart
 final myInheritedWidget = MyInheritedWidget.of(context); // NEW
 
     if (myInheritedWidget == null) {
@@ -63,6 +63,6 @@ final myInheritedWidget = MyInheritedWidget.of(context); // NEW
 ## Problem Resolved
 
 - Not using Inheritance causes 2 severe problems:
-
+- 
 1) We will need to create identical constructors for every child component in the widget tree
 2) When we update the passed data, flutter will rebuild every single one of those child classes which is unnecessary and costly
